@@ -37,6 +37,7 @@
             android:layout_height="wrap_content"
             android:text="Multi Player"
             android:id="@+id/btnMultiPlayer"
+            android:onClick="startMultiplayerGame"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp" />
 
@@ -46,6 +47,7 @@
             android:text="Scores"
             android:id="@+id/btnScoresButton"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dp" />
+            android:layout_marginTop="10dp"
+            android:onClick="startGameScores"/>
     </LinearLayout>
 </RelativeLayout>

@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,5 +16,17 @@ public class MainActivity extends AppCompatActivity {
         Intent gameIntent = new Intent(this, GameActivity.class);
 
         startActivity(gameIntent);
+    }
+
+    public void startMultiplayerGame(View view) {
+        Intent multiGameIntent = new Intent(this, MultiplayerActivity.class);
+
+        startActivity(multiGameIntent);
+    }
+
+    public void startGameScores(View view) {
+        Intent gameScoresActivity = new Intent(this, ScoresActivity.class);
+
+        startActivity(gameScoresActivity);
     }
 }

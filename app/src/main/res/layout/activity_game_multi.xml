@@ -2,7 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="io.ignit.hangdroid.GameOverActivity">
+    android:background="@color/white"
+    tools:context="io.ignit.hangdroid.GameActivity">
 
     <ImageView
         android:layout_width="wrap_content"
@@ -12,62 +13,61 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:contentDescription="HangDroid"
-        android:src="@drawable/game_over" />
+        android:src="@drawable/hangdroid_0" />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/imgHanger"
+        android:orientation="horizontal"
         android:id="@+id/layoutLetters"
         android:layout_centerHorizontal="true">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/txtPoints"
-            android:text=""
-            android:textSize="40dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Points"
-            android:layout_marginLeft="5dp"
-            android:layout_marginStart="5dp"
-            android:textSize="40dp" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/layoutAddLetter"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         android:orientation="horizontal"
-        android:layout_marginBottom="20dp"
-        android:paddingLeft="20dp"
-        android:paddingStart="20dp"
-        android:paddingRight="20dp"
-        android:paddingEnd="20dp">
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Insert Letter"
+            android:textSize="20sp"
+            android:layout_gravity="center"/>
+
+        <EditText
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtLetter"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:inputType="text"
+            android:maxLength="1" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginStart="10dp"
-            android:onClick="saveScore"
-            android:text="SAVE SCORE" />
-
-        <EditText
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/edtName"
-            android:hint="INSERT YOUR NAME"
-            android:layout_marginLeft="10dp"
-            android:layout_marginStart="10dp"
-            android:inputType="text" />
+            android:onClick="introduceLetter"
+            android:text="Check Letter" />
 
     </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/txtErrors"
+        android:layout_marginTop="200dp"
+        android:layout_alignTop="@+id/imgHanger"
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/red" />
 
 </RelativeLayout>

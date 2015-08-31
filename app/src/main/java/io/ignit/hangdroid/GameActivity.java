@@ -98,6 +98,8 @@ public class GameActivity extends AppCompatActivity {
         gameOverIntent.putExtra("points", totalPoints);
 
         startActivity(gameOverIntent);
+
+        finish();
     }
 
     public void clearScreen() {
